@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .details, .items, .totals {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .details td, .items th, .items td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .totals {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../public/images/logo.png" alt="Logo" width="150">
+            <h2>Tax Invoice/Bill of Supply/Cash Memo</h2>
+        </div>
+        <table class="details">
+            <tr>
+                <td><strong>Sold By:</strong> {{sellerDetails}}</td>
+                <td><strong>Billing Address:</strong> Billing Info Here</td>
+            </tr>
+            <!-- Add more details rows -->
+        </table>
+        <table class="items">
+            <thead>
+                <tr>
+                    <th>Sl. No</th>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Qty</th>
+                    <th>Net Amount</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Type</th>
+                    <th>Tax Amount</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows to be filled -->
+            </tbody>
+        </table>
+        <div class="totals">
+            <p><strong>Amount in Words:</strong> Total Amount in Words Here</p>
+        </div>
+        <div class="footer">
+            <p>Authorized Signatory</p>
+        </div>
+    </div>
+</body>
+</html>
